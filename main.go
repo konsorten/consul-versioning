@@ -84,7 +84,7 @@ func run(c *cli.Context) error {
 	remote := c.String("repository")
 
 	if remote != "" {
-		log.Debugf("Git repository URL: %v", remote)
+		log.Infof("Git repository URL: %v", remote)
 
 		return runRemoteRepository(remote)
 	}
@@ -92,7 +92,7 @@ func run(c *cli.Context) error {
 	// run in directory mode?
 	dir := c.String("directory")
 
-	log.Debugf("Git repository directory: %v", dir)
+	log.Infof("Git repository directory: %v", dir)
 
 	// start handling the directory
 	return runLocalRepository(dir)
